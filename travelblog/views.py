@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from django.views import generic
+from .models import Post
 
-def home(request):
-    return render(request,'travelblog/travelblog.html')
+# Create your views here.
+class PostList(generic.ListView):
+    queryset = Post.objects.all()
+    template_name = "post_list.html"
