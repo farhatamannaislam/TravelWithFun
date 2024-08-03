@@ -1,13 +1,22 @@
-<!-- travelblog/templates/travelblog/signup.html -->
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <h1>Sign Up</h1>
-    <form method="post" action="{% url 'signup' %}">
-        {% csrf_token %}
-        <!-- Your form fields here -->
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-    </form>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 account-center">            
+                <div class="card my-3 shadow">
+                    <div class="card-body">
+                        <h4>Sign Up Here</h4>
+                        <hr>
+                        <form method="POST">
+                            {% csrf_token %}
+                            
+                            <input class="btn btn-primary btn-block" type="submit" value="Sign Up">
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
