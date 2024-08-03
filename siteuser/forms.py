@@ -5,7 +5,10 @@ from django import forms
 
 
 class SignUpForm(UserCreationForm):
-    email = forms.EmailField()
+    username = forms.CharField(max_length=100, required=True)
+    email = forms.EmailField(required=True)
+    password1 = forms.CharField(max_length=50, widget=forms.PasswordInput)
+    password2 = forms.CharField(max_length=50, widget=forms.PasswordInput, label='Confirm password')
 
     class Meta:
         model = User

@@ -3,5 +3,8 @@ from .import views
 from django.contrib.auth import views as auth_view
 
 urlpatterns = [
-    path('sign_up/', views.sign_up, name='signup'),
+     path('signup/', views.signup, name='signup'),
 ]
+
+for url in urlpatterns:
+    print(url)  # Print each URL pattern for debugging
