@@ -20,7 +20,7 @@ from siteuser import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('', include('siteuser.urls')),
+    path('', include('siteuser.urls')),
     path('',include('travelblog.urls'), name = "travelblog-urls"),
     path("accounts/", include("allauth.urls")),
 ]

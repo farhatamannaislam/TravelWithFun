@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 def signup(request):
     form = UserCreationForm()
     context = {
-        'form':form,
+        'form':form
     }
-    return render(request, 'siteuser/signup.html')
+    return render(request,'siteuser/signup.html')
+    

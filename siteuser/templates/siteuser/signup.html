@@ -1,21 +1,30 @@
 {% extends 'base.html' %}
-{% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3 account-center">            
-                <div class="card my-3 shadow">
-                    <div class="card-body">
-                        <h4>Sign Up Here</h4>
-                        <hr>
-                        <form method="POST">
-                            {% csrf_token %}
-                            
-                            <input class="btn btn-primary btn-block" type="submit" value="Sign Up">
-                        </form>
-                    </div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center">Sign Up</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_username">Username</label>
+                    <input type="text" name="username" class="form-control" id="id_username" required>
                 </div>
+                <div class="form-group">
+                    <label for="id_email">Email</label>
+                    <input type="email" name="email" class="form-control" id="id_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_password">Password</label>
+                    <input type="password" name="password" class="form-control" id="id_password" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_password2">Confirm Password</label>
+                    <input type="password" name="password2" class="form-control" id="id_password2" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-5">Sign Up</button>
+            </form>
         </div>
     </div>
 </div>
