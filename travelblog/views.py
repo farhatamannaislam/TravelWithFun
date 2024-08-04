@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import Post
+from .forms import PostForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 class PostList(generic.ListView):
@@ -28,4 +30,20 @@ def post_detail(request, slug):
         request,
         "travelblog/post_detail.html",
         {"post": post},
+    )
+
+@login_required
+def post_create(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save()  # Save directly as form already includes author
+            return redirect('home')  # Redirect to a list or detail view after saving
+    else:
+        form = PostForm()
+
+    return render(
+        request,
+        'travelblog/post_form.html',
+        {'form': form},
     )
