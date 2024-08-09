@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
-from .forms import ProfileUpdateForm, UserUpdateForm
+from .forms import ProfileUpdateForm, SiteuserUpdateForm
 from django.contrib.auth.decorators import login_required
 
 @login_required
 def profile(request):
     if request.method == 'POST':
-        u_form = UserUpdateForm(request.POST, instance=request.user)
+        u_form = SiteuserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profilemodel)
         
         if u_form.is_valid() and p_form.is_valid():
@@ -13,7 +13,7 @@ def profile(request):
             p_form.save()
             return redirect('siteuser-profile')
     else:
-        u_form = UserUpdateForm(instance=request.user)
+        u_form = SiteuserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profilemodel)
 
     context = {

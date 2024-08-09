@@ -10,6 +10,9 @@
                 <p class="post-subtitle text-muted mb-0">
                     <span class="author">{{ post.author }}</span> |
                     <span class="date">{{ post.created_on|date:"F j, Y" }}</span>
+                    <span><a class="btn btn-primary mx-2 float-right btn-sm"
+                        href="{% url 'post_edit' slug=post.slug %}">Edit</a></span>
+                    <span class="btn btn-danger float-right btn-sm">Delete</span>
                 </p>
             </div>
             <!-- Image Section -->
