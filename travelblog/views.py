@@ -20,7 +20,7 @@ def post_detail(request, slug):
 
     **Template:**
 
-    :template:`blog/post_detail.html`
+    :template:`travelblog/post_detail.html`
     """
 
     queryset = Post.objects.filter(status=1)
@@ -47,8 +47,11 @@ def post_create(request):
         'travelblog/post_form.html',
         {'form': form},
     )
-
+@login_required
 def post_edit(request, slug):
+    """
+    Function to edit post from blog
+    """  
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
@@ -58,3 +61,16 @@ def post_edit(request, slug):
     else:
         form = PostForm(instance=post)
     return render(request, 'travelblog/post_edit.html', {'form': form, 'post': post})
+
+@login_required
+def post_delete(request, slug):
+    """
+    Function to delete post from blog
+    """
+    post = get_object_or_404(Post, slug=slug)
+    
+    if request.method == 'POST':
+        post.delete()
+        return redirect('home')
+    
+    return render(request, 'travelblog/post_delete.html', {'post': post})
