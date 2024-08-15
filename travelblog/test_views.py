@@ -6,6 +6,9 @@ from .models import Post
 class TestBlogViews(TestCase):
 
     def setUp(self):
+        """
+        Set up the test environment.
+        """
         self.user = User.objects.create_superuser(
             username="myUsername",
             password="myPassword",
@@ -17,6 +20,9 @@ class TestBlogViews(TestCase):
         self.post.save()
 
     def test_render_post_detail_page(self):
+        """
+        Test post detail functionality
+        """
         response = self.client.get(reverse(
             'post_detail', args=['blog-title']))
         self.assertEqual(response.status_code, 200)

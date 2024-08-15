@@ -7,6 +7,9 @@ from cloudinary.models import CloudinaryField
 
 
 class ProfileModel(models.Model):
+    """
+    Represents User Profile with associated image
+     """    
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = CloudinaryField('image', default='default.png', validators=[FileExtensionValidator(['png', 'jpg'])])
     def __str__(self):

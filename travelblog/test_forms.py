@@ -7,11 +7,15 @@ from .forms import PostForm, PostUpdateForm
 class PostFormTests(TestCase):
 
     def setUp(self):
-       
+        """
+        Set up the test environment.
+        """
         self.user = User.objects.create_user(username='testeruser', password='testerpass')
 
     def test_post_form_is_valid_data(self):
-        
+        """
+        Test if the PostForm is valid with correct data.
+        """
         form_data = {
             'title': 'Tester Title',
             'slug': 'tester-title',
@@ -23,13 +27,17 @@ class PostFormTests(TestCase):
         self.assertTrue(form.is_valid(), msg=form.errors)
 
     def test_post_form_with_no_data(self):
-  
+        """
+        Test if the PostForm is invalid with no data.
+        """  
         form = PostForm(data={})
         self.assertFalse(form.is_valid())
         self.assertEqual(len(form.errors), 5)  
 
     def test_post_form_is_invalid_data(self):
-
+        """
+        Test if the PostForm is invalid with incorrect data.
+        """
         form_data = {
             'title': '',  
             'slug': 'tester-title',
@@ -43,7 +51,9 @@ class PostFormTests(TestCase):
         self.assertIn('status', form.errors)
 
     def test_post_update_form_is_valid_data(self):
-
+        """
+        Test if the PostUpdateForm is valid with correct data.
+        """
         post = Post.objects.create(
             title='Real Title',
             slug='real-title',
@@ -62,7 +72,9 @@ class PostFormTests(TestCase):
         self.assertTrue(form.is_valid(), msg=form.errors)
 
     def test_post_update_form_with_no_data(self):
-   
+        """
+        Test if the PostUpdateForm is invalid with incorrect data.
+        """   
         form = PostUpdateForm(data={})
         self.assertFalse(form.is_valid())
         self.assertEqual(len(form.errors), 5)  

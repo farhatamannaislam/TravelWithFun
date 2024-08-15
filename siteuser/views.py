@@ -4,6 +4,16 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def profile(request):
+    """
+    Display user Profile and process user's profile update form.
+    **Context:**
+
+    - `u_form`: An instance of :form:`siteuser.SiteuserUpdateForm`
+    - `p_form`: An instance of :form:`siteuser.ProfileUpdateForm`
+    **Template:**
+
+    :template:`siteuser/profile.html`
+    """  
     if request.method == 'POST':
         u_form = SiteuserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profilemodel)

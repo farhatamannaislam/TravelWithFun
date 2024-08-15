@@ -11,12 +11,12 @@ class PostList(generic.ListView):
 
 def post_detail(request, slug):
     """
-    Display an individual :model:`blog.Post`.
+    Display an individual :model:`travelblog.Post`.
 
     **Context**
 
     ``post``
-        An instance of :model:`blog.Post`.
+        An instance of :model:`travelblog.Post`.
 
     **Template:**
 
@@ -34,11 +34,23 @@ def post_detail(request, slug):
 
 @login_required
 def post_create(request):
+    """
+    Create a Post.
+
+    **Context**
+
+    ``form``
+        An instance of :form:`travelblog.PostForm`.
+
+    **Template:**
+
+    :template:`travelblog/post_form.html`
+    """
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
-            post = form.save()  # Save directly as form already includes author
-            return redirect('home')  # Redirect to a list or detail view after saving
+            post = form.save() 
+            return redirect('home')
     else:
         form = PostForm()
 
@@ -50,8 +62,19 @@ def post_create(request):
 @login_required
 def post_edit(request, slug):
     """
-    Function to edit post from blog
-    """  
+    Edit a Post.
+
+    **Context**
+
+    ``form``
+        An instance of :form:`travelblog.PostForm`.
+    ``post``
+        An instanece of :model:'travelblog.Post'
+
+    **Template:**
+
+    :template:`travelblog/post_edit.html`
+    """ 
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
@@ -65,8 +88,16 @@ def post_edit(request, slug):
 @login_required
 def post_delete(request, slug):
     """
-    Function to delete post from blog
-    """
+    Delete a Post.
+
+    **Context**
+    ``post``
+        An instanece of :model:'travelblog.Post'
+
+    **Template:**
+
+    :template:`travelblog/post_delete.html`
+    """ 
     post = get_object_or_404(Post, slug=slug)
     
     if request.method == 'POST':
