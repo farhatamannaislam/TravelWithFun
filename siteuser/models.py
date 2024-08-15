@@ -25,6 +25,7 @@ class ProfileModel(models.Model):
     Display user Profile
     """    
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = CloudinaryField('image', default='default.png')
+    image = CloudinaryField('image', blank=True, null=True, default = 'default_vi1qoo')
     def __str__(self):
         return self.user.username
+    
