@@ -5,7 +5,7 @@ from cloudinary.models import CloudinaryField
 from django.core.exceptions import ValidationError
 from cloudinary import CloudinaryResource
 
-# Create your models here.
+#Create your models here.
 def validate_cloudinary_file_extension(value):
     """
     Validate cloudinary files 
@@ -25,6 +25,6 @@ class ProfileModel(models.Model):
     Display user Profile
     """    
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = CloudinaryField('image', default='default.png', validators=[validate_cloudinary_file_extension])
+    image = CloudinaryField('image', default='default.png')
     def __str__(self):
         return self.user.username
