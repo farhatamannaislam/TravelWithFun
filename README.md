@@ -62,6 +62,41 @@ The imagery used in this website are all real life photos. Only the favicon is a
 
 Data models were drawn before implementing it into the SW. It serves as a blue print of the data base design.
 
+<img alt="ERD Diagram" src="readmefiles/images/ERDDiagram.png">
+
+## Relationship:
+
+### Post
+
+* User (OneToMany): One user can write several blog posts. This is a OneToMany relationship. 
+
+### Profile
+
+* User (OneToOne): Each user has a single user profile. This is a OneToOne relationship.
+
+
+## Wireframes
+
+Wireframes are given here.
+
+# Security
+
+## eny.py
+
+* API keys and database are stored in the env.py file. This file is included in gitignore to prevent exposure in version control.
+
+## Secured Programming
+
+* In some places login required action is is used to prevent unauthorized entry and actions into the website. 
+
+## Authentication
+
+* Django library django-allauth is used for user authentication. This provides a secure authentication for sign up, login and logout.
+
+
+
+
+
 
 
 

@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'travelblog',
     'siteuser',
+    'django_extensions',
 ]
 
 SITE_ID = 1
