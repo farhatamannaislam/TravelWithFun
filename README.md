@@ -6,7 +6,7 @@ The live view of the site can be found [here](https://travelblogdjango-d9e22c414
 
 # Table of Contents
 
-1. [Overview] (#overview)
+1. [Overview](#overview)
 2. [UX](#ux)
    - [User Stories](#user-stories)
    - [Agile Methodology](#agile-methodology)
@@ -24,23 +24,23 @@ Travel with Fun Blog is a fully responsive website used for travelling motivatio
 
 ## User Stories
 
-### 1. View and create blog posts
+ 1. View and create blog posts
 
-### 2. User Registration and Login
+ 2. User Registration and Login
 
-### 3. User can delete his own post
+ 3. User can delete his own post
 
-### 4. Create Database to enter post
+ 4. Create Database to enter post
 
-### 5. Create site user app
+ 5. Create site user app
 
-### 6. Create User Profile
+ 6. Create User Profile
 
-### 7. User Can edit his own post
+ 7. User Can edit his own post
 
-### 8. Create storage for media files after deployment in Heroku
+ 8. Create storage for media files after deployment in Heroku
 
-### 9. Create Automatd Test
+ 9. Create Automatd Test
 
 ## Agile Methodology
 
