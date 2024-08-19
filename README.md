@@ -93,6 +93,113 @@ Wireframes are given here.
 
 * Django library django-allauth is used for user authentication. This provides a secure authentication for sign up, login and logout.
 
+# Features
+
+## General features
+
+* The site is fully responsive. 
+
+<img alt="Responsive Image" src="readmefiles/images/responsive.png">
+
+* Navigaions are on the top left corner. 
+
+* Social media links are given in the footer.
+
+* Blog contents with writer name and creation date are found on the Home Page.
+
+
+## Home Page
+
+* Navigation: On the top left corner of the Home Page there are navigations available. For a new user the Navigation will be seen as Home, Sign Up, Login, Cretae Post, Profile.
+
+<img alt="New User Navigation" src="readmefiles/images/newusernav.png">
+
+* Navigation: If an user is signed up he/she has the navigation of Home , Logout, Create Post and Profile.
+
+<img alt="Signed User Navigation" src="readmefiles/images/signedupnav.png">
+
+* Header: Header is under navigation bar and in the middle of the page. It is called "Travel with Fun!!"
+
+<img alt="Header" src="readmefiles/images/header.png">
+
+* Cover Image: There is an Enthusiastic Cover Image in the Home Page.
+
+<img alt="Cover Image" src="readmefiles/images/coverimage.png">
+
+* Blog Menu: Under the Cover Image there are blog menu with blog title, respective author name and creation date. If the user clicks the title he/she will
+be redirected to the content. 
+
+<img alt="Blog Menu" src="readmefiles/images/blogmenu.png">
+
+<img alt="Blog Content" src="readmefiles/images/blogcontent.png">
+
+## Sign Up Page
+
+For the new users there is the sign up page with Username, email address (optional), password and password confirmation field. If the user has already signed up 
+before there is a link to sign in.
+
+
+<img alt="Sign Up Page upper part" src="readmefiles/images/signupupper.png">
+
+<img alt="Sign Up Page lower part" src="readmefiles/images/signuplower.png">
+
+
+## Login Page
+
+For the signed up user there is the login page where user has to put username and password. There is also a link to sign up for the new users here.
+
+
+<img alt="Login Page" src="readmefiles/images/Login.png">
+
+## Create Post
+
+If the user is logged in they can go to the Create Post page. There are title, slub, content, status boxes along with save button. If the status is published then the post will appear in the home page. 
+
+<img alt="Create Post" src="readmefiles/images/createpost.png">
+
+
+## Profile 
+
+Profile page shows the username and profile image. There is a link to edit Your Profile.
+
+<img alt="Profile Page" src="readmefiles/images/Profile.png">
+
+In the edit your Profile section user can update his/her username, upload a profile photo. If no photo is uploaded a default image is used.
+
+<img alt="Edit your Profile" src="readmefiles/images/editprofile.png">
+
+## Log Out
+
+There is the Log out page asking the user if he really wants to go out.
+
+<img alt="Log Out Page" src="readmefiles/images/logout.png">
+
+## Edit/Delete Blog
+
+An user can edit or delete his/her own post. He has to be logged in to do so.
+
+<img alt="Edit Post" src="readmefiles/images/editpost.png">
+
+<img alt="Delete Post" src="readmefiles/images/deletepost.png">
+
+
+## Footer
+
+There are clickable social media links in the footer.
+
+<img alt="Footer" src="readmefiles/images/Footer.png>
+
+## Future Features
+
+* Add Comments: Add comments to the blog post by the users and use a counter for the comments.
+
+* Use text formatter: Use text formatter such as summernote to beautify blog text.
+
+
+
+
+
+
 
 
 
