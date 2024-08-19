@@ -195,6 +195,64 @@ There are clickable social media links in the footer.
 
 * Use text formatter: Use text formatter such as summernote to beautify blog text.
 
+# Technologies Used
+
+* HTML
+* CSS
+* Python
+* Postgres database
+
+# Libraries, Frameworks & Tools
+
+* Django 4.2.14 -  A high-level Python web framework used for developing the web application.
+* Django-Allauth 0.57.2 - For user registration, login, and logout functionality.
+* Gunicorn 20.1.0 - A Python WSGI HTTP server compatible with Django and used to run the project on Heroku
+* Whitenoise5.3.0 - WhiteNoise is used for serving static files in a Django application.
+* Cloudinary - cloud based storage for images.
+* Heroku - for hosting and deployment of the site.
+* Font Awesome - to use icons on the website.
+* Github - to store and display all files and assets for the website.
+* Bootstrap 5.0.1 - A Framework for building responsive sites
+* Am I Responsive? - to test responsiveness on several devices.
+* Lucidchart - to create Data Models.
+* W3C vALIDATOR - to validate CSS and HTML
+* Pixabay - for Photos used in the website.
+* TinyPNG - Compresses images for website.
+* Chrome DevTools - Web Developer Tools.
+* Lighthouse - to test the accessibility of the website.
+* Google Fonts - to import the fonts used on the website.
+* Balsamiq - to create Wireframes.
+* Coolors - to generate Colour Palette
+* Code Institute's Python Linter - to check syntactical problems in Python source code
+
+# Deployment
+
+## Settings and Environment
+
+* I added DATABASE_URL value and a SECRET_KEY value to the env.py file.
+* then I imported the DATABASE_URL and SECRETKEY file paths into the settings.py file.
+* My django was installed and i added it to requirement.txt.
+* I created my project and added static file settings.
+* I created a Procfile in the main directory.
+* I added my workspace and Heroku into ALLOWED_HOSTS in settings.py.
+* I did necessary migrations.
+
+## Heroku Deployment
+
+* I logged into Heroku as I already had an user accout and created new app with an unique neme.
+* I connected Heroku with Github repository.
+* After connection is established I went to settings tab. I clicked  'Reveal Config Vars' and added environment key & value variables which are DATABASE_URL & SECRET_KEY.
+* Then I added DISABLE_COLLECTSTATIC as key and 1 as value to prevent errors.
+* I clicked Add Buildpack to confirm Heroku buildpack is present.
+* Then I went to Deploy section, search my repository and connected it.
+* I chose manual deployment and my main branch where my project is present.
+* After the deployment is finished my live site is viewed.
+
+
+
+
+
+
 
 
 
