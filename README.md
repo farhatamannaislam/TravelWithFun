@@ -197,10 +197,10 @@ There are clickable social media links in the footer.
 
 # Technologies Used
 
-* HTML
-* CSS
-* Python
-* Postgres database
+* HTML5 - Used for structuring the web pages of the application.
+* CSS - Used to style the HTML content.
+* Python 3 - The core backend programming language
+* PostgreSQL- Used as the primary database.
 
 # Libraries, Frameworks & Tools
 
@@ -247,6 +247,11 @@ There are clickable social media links in the footer.
 * Then I went to Deploy section, search my repository and connected it.
 * I chose manual deployment and my main branch where my project is present.
 * After the deployment is finished my live site is viewed.
+
+
+# Testing
+
+## Manual Testing
 
 
 
