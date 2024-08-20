@@ -5,11 +5,11 @@ from cloudinary.models import CloudinaryField
 from django.core.exceptions import ValidationError
 from cloudinary import CloudinaryResource
 
-#Create your models here.
+
 def validate_cloudinary_file_extension(value):
     """
-    Validate cloudinary files 
-    """ 
+    Validate cloudinary files.
+    """
     if isinstance(value, CloudinaryResource):
         extension = value.public_id.split('.')[-1].lower()
     else:
@@ -17,15 +17,20 @@ def validate_cloudinary_file_extension(value):
 
     valid_extensions = ['png', 'jpg']
     if extension not in valid_extensions:
-        raise ValidationError(f'Unsupported file extension: {extension}. Allowed extensions are: {", ".join(valid_extensions)}')
+        raise ValidationError(
+            f'Unsupported file extension: {extension}. '
+            f'Allowed extensions are: {", ".join(valid_extensions)}'
+        )
 
 
 class ProfileModel(models.Model):
     """
-    Display user Profile
-    """    
+    Display user Profile.
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = CloudinaryField('image', blank=True, null=True, default = 'default_vi1qoo')
+    image = CloudinaryField(
+        'image', blank=True, null=True, default='default_vi1qoo'
+    )
+
     def __str__(self):
         return self.user.username
-    

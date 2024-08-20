@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.test import TestCase
 from .models import Post
 
+
 class TestBlogViews(TestCase):
 
     def setUp(self):

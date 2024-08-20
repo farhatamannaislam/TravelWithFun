@@ -52,7 +52,37 @@ Lighthouse was used to analyse the website for performance, accessibility, best 
 
 The website is fully responsive. The responsiveness test result is given below:
 
+<img alt="Responsiveness" src="readmefiles/images/responsiveImage.png">
 
 
+# CI Python Linter
 
+* <details>
+  <summary>siteuser/forms.py</summary>
+  <img alt="Site User Form" src="readmefiles/images/siteuserform.png">
+</details>
 
+* <details>
+  <summary>siteuser/models.py</summary>
+  <img alt="Site User Model" src="readmefiles/images/siteusermodel.png">
+</details>
+
+* <details>
+  <summary>siteuser/views.py</summary>
+  <img alt="Site User Profile" src="readmefiles/images/siteuserprofile.png">
+</details>
+
+* <details>
+  <summary>travelblog/forms.py</summary>
+  <img alt="Travel Blog Form" src="readmefiles/images/travelblogform.png">
+</details>
+
+* <details>
+  <summary>travelblog/models.py</summary>
+  <img alt="Travel Blog Model" src="readmefiles/images/travelblogmodel.png">
+</details>
+
+* <details>
+  <summary>travelblog/views.py</summary>
+  <img alt="Travel Blog View" src="readmefiles/images/travelblogview.png">
+</details>

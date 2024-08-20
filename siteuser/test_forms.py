@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from .forms import SiteuserUpdateForm, ProfileUpdateForm
 from .models import ProfileModel
 
+
 class TestSiteuserUpdateForm(TestCase):
 
     def setUp(self):
@@ -11,8 +12,8 @@ class TestSiteuserUpdateForm(TestCase):
         Setup Test
         """
         self.user = User.objects.create_user(
-            username='testeruser', 
-            password='testerpassword', 
+            username='testeruser',
+            password='testerpassword',
             email='tester@gmail.com'
         )
 
@@ -34,9 +35,6 @@ class TestSiteuserUpdateForm(TestCase):
         """
         form = SiteuserUpdateForm(data={})
         self.assertFalse(form.is_valid())
-        self.assertEqual(len(form.errors), 1) 
-
-
-
+        self.assertEqual(len(form.errors), 1)
 
 

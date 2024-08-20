@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import Post
-from .forms import PostForm,PostUpdateForm
+from .forms import PostForm, PostUpdateForm
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+
 class PostList(generic.ListView):
     queryset = Post.objects.all()
     template_name = "travelblog/index.html"
+
 
 def post_detail(request, slug):
     """
@@ -31,6 +32,7 @@ def post_detail(request, slug):
         "travelblog/post_detail.html",
         {"post": post},
     )
+
 
 @login_required
 def post_create(request):
@@ -61,6 +63,8 @@ def post_create(request):
         'travelblog/post_form.html',
         {'form': form},
     )
+
+
 @login_required
 def post_edit(request, slug):
     """
@@ -76,7 +80,7 @@ def post_edit(request, slug):
     **Template:**
 
     :template:`travelblog/post_edit.html`
-    """ 
+    """
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
@@ -85,7 +89,12 @@ def post_edit(request, slug):
             return redirect('post_detail', slug=post.slug)
     else:
         form = PostForm(instance=post)
-    return render(request, 'travelblog/post_edit.html', {'form': form, 'post': post})
+        return render(
+            request,
+            'travelblog/post_edit.html',
+            {'form': form, 'post': post}
+        )
+
 
 @login_required
 def post_delete(request, slug):
@@ -99,11 +108,11 @@ def post_delete(request, slug):
     **Template:**
 
     :template:`travelblog/post_delete.html`
-    """ 
+    """
     post = get_object_or_404(Post, slug=slug)
-    
+
     if request.method == 'POST':
         post.delete()
         return redirect('home')
-    
+
     return render(request, 'travelblog/post_delete.html', {'post': post})

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ProfileUpdateForm, SiteuserUpdateForm
 from django.contrib.auth.decorators import login_required
 
+
 @login_required
 def profile(request):
     """
@@ -13,11 +14,13 @@ def profile(request):
     **Template:**
 
     :template:`siteuser/profile.html`
-    """  
+    """
     if request.method == 'POST':
         u_form = SiteuserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profilemodel)
-        
+        p_form = ProfileUpdateForm(
+            request.POST, request.FILES, instance=request.user.profilemodel
+        )
+  
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
             p_form.save()
