@@ -251,7 +251,7 @@ There are clickable social media links in the footer.
 
 # Testing
 
-## Manual Testing
+All testing information can be found in [TESTING.md.](TESTING.md)
 
 
 
