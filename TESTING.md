@@ -10,5 +10,7 @@ I performed both manual and automated testing for this project.
 
 HTML validation is done by [W3c HTML Validator](https://validator.w3.org/)
 
-All the screenshots of the templates are attached here.
+Home Page - [home](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2F)
+
+
 
