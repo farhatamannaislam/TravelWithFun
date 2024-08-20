@@ -12,12 +12,12 @@ HTML validation is done by [W3C HTML Validator](https://validator.w3.org/)
 
 Home Page - [home](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2F)
 
-Sign Up - (sign up)(https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2Faccounts%2Fsignup%2F)
+Sign Up - [sign up](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2Faccounts%2Fsignup%2F)
 
 The signup form is taken from Django walkthrough project. That had 4 errors. So similar errors are inherited in my project.
 For a clear understanding I am attaching the result of walkthrough Register page here.
 
-Walkthrough register page -(register)(https://validator.w3.org/nu/?doc=https%3A%2F%2Fdjango2farha-75ae79d0894c.herokuapp.com%2Faccounts%2Fsignup%2F)
+Walkthrough register page -[register](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdjango2farha-75ae79d0894c.herokuapp.com%2Faccounts%2Fsignup%2F)
 
 Login Page - [login](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2Faccounts%2Flogin%2F)
 
