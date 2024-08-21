@@ -14,7 +14,37 @@ The live view of the site can be found [here](https://travelblogdjango-d9e22c414
    - [Color Scheme](#color-scheme)
    - [Imagery](#imagery)
    - [Data Models](#data-models)
-
+   - [Relationship](#relationship)
+   - [Wireframes](#wireframes)
+4. [Security](#security)
+   - [eny.py](#enypy)
+   - [Secured Programming](#secured-programming)
+   - [Authentication](#authentication)
+5. [Features](#features)
+   - [General features](#general-features)
+   - [Home Page](#home-page)
+   - [Sign Up Page](#sign-up-page)
+   - [Login Page](#login-page)
+   - [Create Post](#create-post)
+   - [Profile](#profile)
+   - [Log Out](#log-out)
+   - [Edit/Delete Blog](#editdelete-blog)
+   - [Footer](#footer)
+   - [Future Features](#future-features)
+6. [Technologies Used](#technologies-used)
+7. [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
+8. [Deployment](#deployment)
+   - [Settings and Environment](#settings-and-environment)
+   - [Heroku Deployment](#heroku-deployment)
+9. [Local Development](#local-development)
+   - [Fork](#fork)
+   - [Clone](#clone)
+10. [Bugs](#bugs)
+11. [Testing](#testing)
+12. [Resources and Tutorials](#resources-and-tutorials)
+13. [Future Improvements](#future-improvements)
+14. [Content](#content)
+15. [Acknowledgments](#acknowledgments)
 
 # Overview
 
@@ -251,7 +281,7 @@ There are clickable social media links in the footer.
 * Bootstrap 5.0.1 - A Framework for building responsive sites
 * Am I Responsive? - to test responsiveness on several devices.
 * Lucidchart - to create Data Models.
-* W3C vALIDATOR - to validate CSS and HTML
+* W3C Validator- to validate CSS and HTML
 * Pixabay - for Photos used in the website.
 * TinyPNG - Compresses images for website.
 * Chrome DevTools - Web Developer Tools.
@@ -285,20 +315,50 @@ There are clickable social media links in the footer.
 * After the deployment is finished my live site is viewed.
 
 
+# Local Development
+
+## Fork 
+* Log in to Github or crate an account.
+* Click on the repository name and click the Fork button in the top right corner.
+
+## Clone
+
+* Log in to Github or crate an account and find or create the repository.
+* Click on the code button and select  HTTPS, SSH or GitHub CLI and copy the link shown.
+* Open the terminal in your local editor and change the current working directory to the location where you want to use for the cloned directory.
+* Type 'git clone' into the terminal and paste the link you copied and press enter.
+
+# Bugs
+
+There is no known bug in the project.
+
 # Testing
 
 All testing information can be found in [TESTING.md.](TESTING.md)
 
+# Resources and Tutorials
 
+* [Django Tutorial and Documentation](https://docs.djangoproject.com/en/5.0/) - Official Django documentation, tutorials, and guides for Django development.
+* [Stack Overflow](https://stackoverflow.com/) - For troubleshooting and finding solution.
+* [W3C School](https://www.w3schools.com/) - Online Web Tutorials for Programming.
+* [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - How to work with Bootstrap.
+* [Code Institute Walkthrough Django Project](https://github.com/farhatamannaislam/Django_blog_2) - The idea of how Django blog works comes from this project.
+* [OpenAI GPT-4](https://openai.com/index/gpt-4/) - occasionaly used to create tutorial like explanations.
+* [Wikipedia](https://www.wikipedia.org/) - To get some detail information about tourist attractions.
 
+# Future Improvements
 
+The user story "Create a Database to enter post" was created when the work was almost finished. Unfortunately it was forgotten by the author to include it in correct time. So there is a scope of Future Improvement for this story time line.
 
+# Content
 
+All the contents are written by the Author from personal experience. Some details information about tourist attractions are collected from Wikipedia.
 
+# Acknowledgments
 
-
-
-
+* My mentor Antonio Rodriguez for his valueable support and guidance.
+* Code Institute Tutoring Support.
+* Code Institute Slack community for helpful responses and feedback.
 
 
 
