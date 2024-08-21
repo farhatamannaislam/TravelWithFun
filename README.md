@@ -79,6 +79,42 @@ Data models were drawn before implementing it into the SW. It serves as a blue p
 
 Wireframes are given here.
 
+* <details>
+  <summary>Home</summary>
+  <img alt="Home DeskTop" src="readmefiles/wireframe/homedesktop.png">
+  <img alt="Home Mobile" src="readmefiles/wireframe/homemobile.png">
+</details>
+
+* <details>
+  <summary>Sign Up</summary>
+  <img alt="Sign Up DeskTop" src="readmefiles/wireframe/signupdesktop.png">
+  <img alt="Sign Up Mobile" src="readmefiles/wireframe/signupmobile.png">
+</details>
+
+* <details>
+  <summary>Login</summary>
+  <img alt="Login DeskTop" src="readmefiles/wireframe/logindesktop.png">
+  <img alt="Login Mobile" src="readmefiles/wireframe/loginmobile.png">
+</details>
+
+* <details>
+  <summary>Create Post</summary>
+  <img alt="Create Post DeskTop" src="readmefiles/wireframe/createpostdesktop.png">
+  <img alt="Create Post Mobile" src="readmefiles/wireframe/createpostmobile.png">
+</details>
+
+* <details>
+  <summary>Profile</summary>
+  <img alt="Profile DeskTop" src="readmefiles/wireframe/profiledesktop.png">
+  <img alt="Profile Mobile" src="readmefiles/wireframe/profilemobile.png">
+</details>
+
+* <details>
+  <summary>Log Out</summary>
+  <img alt="Log Out DeskTop" src="readmefiles/wireframe/logoutdesktop.png">
+  <img alt="Log Out Mobile" src="readmefiles/wireframe/logoutmobile.png">
+</details>
+
 # Security
 
 ## eny.py
