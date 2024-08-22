@@ -4,6 +4,20 @@ I performed both manual and automated testing for this project.
 
 <img alt="Manual Test" src="readmefiles/images/Manualtest.png">
 
+# Automated Testing
+
+travelblog/test_views.py
+
+Tests the post detail view by creating new instances of the of the username, password,email(optional), title, slug, content and then populating the post detail with these created instances. The test then checks if all created instances are present.
+
+travelblog/test_forms.py
+
+Tests the functionality of the PostForm and PostUpdateForm.
+
+siteuser/travelblog/test_forms.py
+
+Tests the functionality of the SiteuserUpdateForm.
+
 # Code Validation
 
 ## HTML
