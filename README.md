@@ -2,6 +2,8 @@
 
 Welcome to Travel with Fun Blog. As a siteuser, people can share their exciting travel experience with others. The goal of the website is to motivate people for travelling.
 
+<img alt="Responsive Design" src="readmefiles/images/responsive.png">
+
 The live view of the site can be found [here](https://travelblogdjango-d9e22c4148cf.herokuapp.com/)
 
 # Table of Contents
