@@ -14,7 +14,7 @@ Tests the post detail view by creating new instances of the of the username, pas
 
 Tests the functionality of the PostForm and PostUpdateForm.
 
-* siteuser/travelblog/test_forms.py
+* siteuser/test_forms.py
 
 Tests the functionality of the SiteuserUpdateForm.
 
