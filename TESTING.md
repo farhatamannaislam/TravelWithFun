@@ -37,7 +37,7 @@ Login Page - [login](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdj
 
 Create Post - [create post](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2Fpost%2Fnew%2F)
 
-Profile - [profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2Fprofile%2F)
+Profile - [profile](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2Fsiteuserprofile%2Fprofile%2F)
 
 Log Out - [logout](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftravelblogdjango-d9e22c4148cf.herokuapp.com%2Faccounts%2Flogout%2F)
 
