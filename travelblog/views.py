@@ -3,35 +3,26 @@ from django.views import generic
 from .models import Post
 from .forms import PostForm, PostUpdateForm
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
 
 
 class PostList(generic.ListView):
-    queryset = Post.objects.all()
+    model = Post
+    queryset = Post.objects.filter(status=1)  # Only fetch published posts
     template_name = "travelblog/index.html"
 
 
 def post_detail(request, slug):
     """
-    Display an individual :model:`travelblog.Post`.
-
-    **Context**
-
-    ``post``
-        An instance of :model:`travelblog.Post`.
-
-    **Template:**
-
-    :template:`travelblog/post_detail.html`
+    Display an individual post.
     """
+    post = get_object_or_404(Post, slug=slug)
 
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    # ✅ Prevent unauthorized users from viewing drafts
+    if post.status == 0 and post.author != request.user:
+        raise Http404("This post is not available.")
 
-    return render(
-        request,
-        "travelblog/post_detail.html",
-        {"post": post},
-    )
+    return render(request, "travelblog/post_detail.html", {"post": post})
 
 
 @login_required
