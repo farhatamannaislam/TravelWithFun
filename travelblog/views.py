@@ -1,15 +1,24 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post
 from .forms import PostForm, PostUpdateForm
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 
 
-class PostList(generic.ListView):
+class PostList(LoginRequiredMixin, generic.ListView):
     model = Post
-    queryset = Post.objects.filter(status=1)  # Only fetch published posts
     template_name = "travelblog/index.html"
+    
+    def get_queryset(self):
+        """ 
+        Show published posts to all users. 
+        Show drafts only to their authors.
+        """
+        if self.request.user.is_authenticated:
+            return Post.objects.filter(status=1) | Post.objects.filter(author=self.request.user)
+        return Post.objects.filter(status=1)  # Only show published posts to anonymous users
 
 
 def post_detail(request, slug):
