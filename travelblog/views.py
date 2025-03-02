@@ -7,18 +7,18 @@ from django.contrib.auth.decorators import login_required
 from django.http import Http404
 
 
-class PostList(LoginRequiredMixin, generic.ListView):
+class PostList(generic.ListView):
     model = Post
     template_name = "travelblog/index.html"
-    
+
     def get_queryset(self):
         """ 
-        Show published posts to all users. 
-        Show drafts only to their authors.
+        Show published posts to all users.
+        Show drafts only to their respective authors.
         """
         if self.request.user.is_authenticated:
             return Post.objects.filter(status=1) | Post.objects.filter(author=self.request.user)
-        return Post.objects.filter(status=1)  # Only show published posts to anonymous users
+        return Post.objects.filter(status=1)  # Show only published posts to anonymous users
 
 
 def post_detail(request, slug):
