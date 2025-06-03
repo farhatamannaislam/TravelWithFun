@@ -186,7 +186,7 @@ Wireframes are given here.
 
 <img alt="Signed User Navigation" src="readmefiles/images/signedupnav.png">
 
-* Header: Header is under navigation bar and in the middle of the page. It is called "Travel with Fun!!"
+* Header & About Text: Header is under navigation bar and in the middle of the page. It is called "Travel with Fun!!" It is accompanied with an attractive about text.
 
 <img alt="Header" src="readmefiles/images/header.png">
 
