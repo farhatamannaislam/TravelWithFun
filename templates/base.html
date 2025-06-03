@@ -74,17 +74,23 @@
         </div>
     </nav>
 
-    <main class="flex-grow-1 bg-custom py-5">
-        <div id="main-text">
-            <h2>
-                Travel with Fun!!
-            </h2>
-        </div>
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
+<main class="flex-grow-1 bg-custom py-5">
+  <div id="main-text" class="px-3">
+    <h2 class="text-center">Travel with Fun!!</h2>
+    <p class="mt-4 lead">
+      Welcome to <strong>Travel with Fun</strong> blog – your space to explore inspiring destinations, share
+      unforgettable experiences, and connect with fellow travel lovers. Whether you're discovering hidden
+      gems, capturing breathtaking moments, or simply looking for your next adventure, this blog is here to
+      spark your wanderlust. Start your journey, post your stories, and make every trip unforgettable!
+    </p>
+  </div>
 
-    </main>
+  {% block content %}
+  <!-- Content Goes here -->
+  {% endblock content %}
+</main>
+
+
 
     <!-- Footer -->
     <footer class="footer bg-secondary text-white py-4">
